@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kids Learning Adventure</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gradient-to-r from-yellow-100 to-blue-100 min-h-screen font-sans flex items-center justify-center">
+  <div class="container max-w-5xl bg-white shadow-lg rounded-lg p-6">
+    <h1 class="text-4xl font-extrabold text-pink-500 text-center mb-6 animate-bounce">Kids Learning Adventure!</h1>
+
+    <!-- Game Menu -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Learning materials -->
+      <div onclick="window.location.href='learning-materials.html?topic=numbers'" class="game-btn">Numbers Learning 📚</div>
+      <div onclick="window.location.href='learning-materials.html?topic=letters'" class="game-btn">Letters Learning 📚</div>
+      <div onclick="window.location.href='learning-materials.html?topic=shapes'" class="game-btn">Shapes Learning 📚</div>
+      <div onclick="window.location.href='learning-materials.html?topic=animals'" class="game-btn">Animals Learning 📚</div>
+      <div onclick="window.location.href='learning-materials.html?topic=fruits'" class="game-btn">Fruits Learning 📚</div>
+      <div onclick="window.location.href='learning-materials.html?topic=math'" class="game-btn">Math Learning 📚</div>
+
+    
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

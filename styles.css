@@ -1,0 +1,236 @@
+/* General Button Style with Animation */
+.game-btn, .learning-btn {
+    background-color: #FFEB3B; /* Bright yellow for games */
+    color: #333;
+    font-size: 24px; /* Larger font size for visibility */
+    font-weight: bold;
+    padding: 20px 30px; /* Increased padding for a larger button */
+    text-align: center;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: transform 0.2s ease, background-color 0.3s ease; /* Smooth transitions */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: bounce 2s infinite; /* Adding bounce animation */
+}
+
+/* Button Hover Effect */
+.game-btn:hover, .learning-btn:hover {
+    background-color: #FFC107; /* Darker yellow on hover for games */
+    transform: translateY(-4px); /* Lift the button on hover */
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Start and end at normal position */
+    }
+    25% {
+        transform: translateY(-10px); /* Move up */
+    }
+    50% {
+        transform: translateY(0); /* Return to normal */
+    }
+    75% {
+        transform: translateY(-5px); /* Slight bounce back */
+    }
+}
+
+/* Happy, Colorful Background Animation */
+@keyframes colorChange {
+    0% {
+        background-color: #FFEB3B; /* Yellow */
+    }
+    25% {
+        background-color: #FF4081; /* Pink */
+    }
+    50% {
+        background-color: #4CAF50; /* Green */
+    }
+    75% {
+        background-color: #00BCD4; /* Cyan */
+    }
+    100% {
+        background-color: #FFEB3B; /* Back to yellow */
+    }
+}
+
+/* Apply the background animation to the whole page or learning-container */
+body, .learning-container {
+    animation: colorChange 10s infinite; /* Fun background color transition */
+}
+
+/* Learning Material Container */
+.learning-container {
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.651);
+    margin-top: 40px;
+    animation: fadeInAndBounce 1.5s ease-out;
+}
+
+/* Combined Fade-in and Bounce Animation for Container */
+@keyframes fadeInAndBounce {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(30px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.05) translateY(-15px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Title with a Fun Bounce Effect */
+.learning-container h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #FF6347; /* Tomato color */
+    font-weight: bold;
+    margin-bottom: 25px;
+    
+}
+
+/* Fun bouncing effect for the title */
+@keyframes bounceTitle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Zoom-in and Pop Animation for Images */
+.learning-container img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 20px;
+    animation: popIn 1s ease-out;
+}
+
+/* Fun "pop-in" effect for images */
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Bounce Animation for Learning Material Buttons */
+.learning-container .game-btn {
+    background-color: #FFB6C1; /* Light pink */
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 25px 35px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: transform 0.3s, background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    animation: bounceButton 1.2s ease-out infinite; /* Bounce effect */
+}
+
+/* Bouncing effect for buttons */
+@keyframes bounceButton {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-15px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Hover Effect for Buttons */
+.learning-container .game-btn:hover {
+    background-color: #FF69B4; /* Hot pink */
+    transform: translateY(-6px); /* Lift effect */
+}
+
+/* Fun Text Animation for Paragraphs */
+.learning-container p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #4CAF50; /* Green color */
+    margin: 15px 0;
+    animation: slideInText 1s ease-out;
+}
+
+/* Slide-in animation for text */
+@keyframes slideInText {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Floating Effect for Fun Icons */
+.learning-container .fun-icon {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    animation: floatIcons 3s ease-in-out infinite;
+    font-size: 40px;
+}
+
+/* Floating animation for fun icons */
+@keyframes floatIcons {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .learning-container img {
+        width: 90%;
+        max-width: none;
+    }
+
+    .learning-container h2 {
+        font-size: 28px;
+    }
+
+    .learning-container p {
+        font-size: 18px;
+    }
+}
